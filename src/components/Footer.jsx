@@ -1,43 +1,35 @@
+import { Fragment } from "react";
+import { FaFacebook,FaInstagram } from "react-icons/fa";
+import { FaThreads } from "react-icons/fa6";
+
+
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
-      <nav>
-        <h6 className="footer-title">Services</h6>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Company</h6>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </nav>
-      <nav>
-        <h6 className="footer-title">Legal</h6>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
-      </nav>
-      <form>
-        <h6 className="footer-title">Newsletter</h6>
-        <fieldset className="form-control w-80">
-          <label className="label">
-            <span className="label-text">Enter your email address</span>
-          </label>
-          <div className="join">
-            <input
-              type="text"
-              placeholder="username@site.com"
-              className="input input-bordered join-item"
-            />
-            <button className="btn btn-primary join-item">Subscribe</button>
+    <Fragment>
+      <footer className="text-gray-600 body-font">
+        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a href="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img className=" w-36 my-2 mx-auto" src="/logo.png" alt="logo" />
+          </a>
+          <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+            © 2024 Patiño_col —
+          </p>
+          <div className="flex sm:ml-auto sm:mt-0 mt-4  gap-2 items-center justify-center sm:justify-start">
+            <a href="" target="_blank" className=" hover:text-blue-600 transition-all text-gray-500">
+              <FaFacebook className="text-2xl"/>
+            </a>
+            
+            <a href="" target="_blank" className=" hover:text-blue-600 transition-all text-gray-500">
+            <FaInstagram className="text-2xl"/>
+            </a>
+            <a href="" target="_blank" className=" hover:text-blue-600 transition-all text-gray-500">
+            <FaThreads className="text-2xl"/>
+            </a>
           </div>
-        </fieldset>
-      </form>
-    </footer>
+        </div>
+      </footer>
+      ;
+    </Fragment>
   );
 };
 

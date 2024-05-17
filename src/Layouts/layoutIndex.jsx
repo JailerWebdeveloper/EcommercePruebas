@@ -1,6 +1,7 @@
 import Footer from "../components/Footer";
 import BarraAnuncio from "../components/barraAnuncio";
 import NavBar from "../components/navBar";
+import SubscribeCard from "../components/subscribeSection";
 
 const LayoutIndex = ({ children }) => {
   return(

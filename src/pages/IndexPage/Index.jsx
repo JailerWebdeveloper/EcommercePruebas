@@ -2,37 +2,42 @@ import { useState } from "react";
 import LayoutIndex from "../../Layouts/layoutIndex";
 import HeroComponent from "./components/hero-Component";
 import CardProducto from "../../components/cardProducto";
+import BannerComponent from "./components/banner-Component";
+import SubscribeCard from "../../components/subscribeSection";
 
 const IndexPage = () => {
   //estados locales
 
   const [masVendidas, setMasvendidas] = useState([
     {
-        "id": "1",
-        "Image": "https://www.lacostena.com.mx/media/uploads/Logos/portada_mayonesas.png",
-        "ProductName": "Google Pixel 8 Pro",
-        "Price": 1099
+      id: "1",
+      Image:
+        "https://dummyimage.com/720x600",
+      ProductName: "Google Pixel 8 Pro",
+      Price: 1099,
     },
     {
-        "id": "2",
-        "Image": "https://www.lacostena.com.mx/media/uploads/Logos/portada_mayonesas.png",
-        "ProductName": "Apple iPhone 15 Pro Max",
-        "Price": 1499
+      id: "2",
+      Image:
+        "https://dummyimage.com/720x600",
+      ProductName: "Apple iPhone 15 Pro Max",
+      Price: 1499,
     },
     {
-        "id": "3",
-        "Image": "https://www.lacostena.com.mx/media/uploads/Logos/portada_mayonesas.png",
-        "ProductName": "Oppo Find N3 Flip",
-        "Price": 899
+      id: "3",
+      Image:
+        "https://dummyimage.com/720x600",
+      ProductName: "Oppo Find N3 Flip",
+      Price: 899,
     },
     {
-        "id": "4",
-        "Image": "https://www.lacostena.com.mx/media/uploads/Logos/portada_mayonesas.png",
-        "ProductName": "Samsung Galaxy Z Fold 5",
-        "Price": 1799
-    }
-]
-);
+      id: "4",
+      Image:
+        "https://dummyimage.com/720x600",
+      ProductName: "Samsung Galaxy Z Fold 5",
+      Price: 1799,
+    },
+  ]);
   return (
     <LayoutIndex>
       <HeroComponent />
@@ -111,21 +116,34 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <section>
+      <section className="mt-10">
         <div className="w-full flex items-center mt-10 flex-col gap-2">
-          <h2 className="text-5xl font-bold capitalize tracking-wider ">
+          <h2 className="text-4xl  body-font font-bold capitalize tracking-wider ">
             Mas Vendidos
           </h2>
           <div className="divider w-3/5 mx-auto "></div>
           <div className="grid w-full px-10 py-5 grid-cols-4 grid-rows-1 gap-5">
             {masVendidas.map((producto) => (
-                <div className="col-span-1 w-full ">
-              <CardProducto Price={producto.Price} ProductName={producto.ProductName} alt="imagen" Imagen={producto.Image} id={producto.id} />
+              <div className="col-span-1 w-full ">
+                <CardProducto
+                  Price={producto.Price}
+                  ProductName={producto.ProductName}
+                  alt="imagen"
+                  Imagen={producto.Image}
+                  id={producto.id}
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
+      <BannerComponent
+        Title="Descubre Lo que mas te Luce"
+        Description="Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años"
+        ButtonText="Ver mas"
+        UrlImage="/Camisabanner.png"
+      />
+      <div className="p-10"><SubscribeCard/></div>
     </LayoutIndex>
   );
 };
