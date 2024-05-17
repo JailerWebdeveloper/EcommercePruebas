@@ -122,7 +122,7 @@ const IndexPage = () => {
             Mas Vendidos
           </h2>
           <div className="divider w-3/5 mx-auto "></div>
-          <div className="grid w-full px-10 py-5 grid-cols-4 grid-rows-1 gap-5">
+          <div className="grid w-full px-10 py-5 lg:grid-cols-4 grid-cols-2 grid-rows-1 gap-5">
             {masVendidas.map((producto) => (
               <div className="col-span-1 w-full ">
                 <CardProducto
